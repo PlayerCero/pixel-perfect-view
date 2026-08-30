@@ -1,24 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/landing/Navbar";
+import { Hero } from "@/components/landing/Hero";
+import { Stack } from "@/components/landing/Stack";
+import { Projects } from "@/components/landing/Projects";
+import { Experience } from "@/components/landing/Experience";
+import { Education } from "@/components/landing/Education";
+import { Contact } from "@/components/landing/Contact";
+import { Footer } from "@/components/landing/Footer";
+import { BackToTop } from "@/components/landing/BackToTop";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const description =
+  "Perfil profesional de Eric Salinas, Data Analyst en Lima: SQL, Python y Power BI para modelar datos, automatizar procesos y construir tableros de decisión.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Eric Salinas — Data Analyst" },
+      { name: "description", content: description },
+      { property: "og:title", content: "Eric Salinas — Data Analyst" },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "profile" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Stack />
+        <Projects />
+        <Experience />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+      <BackToTop />
+    </>
   );
 }
