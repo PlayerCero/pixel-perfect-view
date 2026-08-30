@@ -1,10 +1,11 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { mailto, profile } from "@/lib/profile";
 
 const actions = [
-  { icon: Mail, label: "Correo", href: "mailto:eric.salinas@alum.udep.edu.pe" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Github, label: "GitHub", href: "#" },
+  { icon: Mail, label: "Correo", href: mailto, external: false },
+  { icon: Linkedin, label: "LinkedIn", href: profile.linkedin, external: true },
+  { icon: Github, label: "GitHub", href: profile.github, external: true },
 ];
 
 export function Contact() {
@@ -23,6 +24,7 @@ export function Contact() {
                 <li key={a.label}>
                   <a
                     href={a.href}
+                    {...(a.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="flex w-full items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
                   >
                     <a.icon className="size-4" aria-hidden />
@@ -32,7 +34,7 @@ export function Contact() {
               ))}
             </ul>
             <p className="mt-6 text-xs text-muted-foreground">
-              Pueblo Libre, Lima, Perú · Disponible para modalidad presencial, híbrida o remota.
+              {profile.location} · Disponible para modalidad presencial, híbrida o remota.
             </p>
           </div>
         </Reveal>

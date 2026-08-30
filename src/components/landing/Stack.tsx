@@ -55,9 +55,6 @@ export function Stack() {
             </Reveal>
           ))}
         </ul>
-        <p className="mt-6 font-mono text-xs text-muted-foreground">
-          Idiomas: español nativo · inglés intermedio (lectura técnica fluida).
-        </p>
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ const links = [
   { id: "stack", label: "Stack" },
   { id: "proyectos", label: "Proyectos" },
   { id: "experiencia", label: "Experiencia" },
+  { id: "certificados", label: "Certificados" },
   { id: "formacion", label: "Formación" },
 ];
 
@@ -47,7 +48,7 @@ export function Navbar() {
       }`}
     >
       <div className="section-shell flex h-16 items-center justify-between gap-4">
-        <a href="#perfil" className="font-mono text-sm font-semibold tracking-tight">
+        <a href="#perfil" className="rounded-md font-mono text-sm font-semibold tracking-tight">
           Eric Salinas
         </a>
 
@@ -58,9 +59,7 @@ export function Navbar() {
               href={`#${l.id}`}
               aria-current={active === l.id ? "true" : undefined}
               className={`rounded-md px-3 py-2 text-sm transition-colors ${
-                active === l.id
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
+                active === l.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {l.label}

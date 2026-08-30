@@ -84,7 +84,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Data Analyst en Lima: SQL, Python y Power BI para modelar datos y construir tableros de decisión.",
       },
       { name: "author", content: "Eric Bekim Salinas Cajaleón" },
+      { name: "robots", content: "index, follow" },
+      { name: "theme-color", content: "#141a26" },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "es_PE" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -110,7 +113,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <HeadContent />
       </head>

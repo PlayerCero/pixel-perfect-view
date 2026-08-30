@@ -1,5 +1,6 @@
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { mailto, profile } from "@/lib/profile";
 
 const highlights = [
   { key: "SQL", detail: "MySQL · PostgreSQL · SQL Server" },
@@ -10,10 +11,7 @@ const highlights = [
 export function Hero() {
   return (
     <section id="perfil" className="relative overflow-hidden pt-28 pb-16 md:pt-32 md:pb-20">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-border"
-      />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-border" />
       <div className="section-shell">
         <Reveal>
           <p className="eyebrow">Disponible para prácticas preprofesionales · Lima, Perú</p>
@@ -59,17 +57,27 @@ export function Hero() {
             </a>
           </div>
           <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
-            <a href="#" className="inline-flex items-center gap-2 hover:text-primary">
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-md hover:text-primary"
+            >
               <Linkedin className="size-4" aria-hidden /> LinkedIn
             </a>
-            <a href="#" className="inline-flex items-center gap-2 hover:text-primary">
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-md hover:text-primary"
+            >
               <Github className="size-4" aria-hidden /> GitHub
             </a>
             <a
-              href="mailto:eric.salinas@alum.udep.edu.pe"
-              className="inline-flex items-center gap-2 hover:text-primary"
+              href={mailto}
+              className="inline-flex items-center gap-2 rounded-md hover:text-primary"
             >
-              <Mail className="size-4" aria-hidden /> Correo
+              <Mail className="size-4" aria-hidden /> {profile.email}
             </a>
           </div>
         </Reveal>
