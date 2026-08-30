@@ -12,9 +12,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/eric-bekim-salinas-cajaleon-30153232b/",
   github: "https://github.com/PlayerCero",
   portfolioRepo: "https://github.com/PlayerCero/Portfolio-Data-Analytics",
-  // TODO: al publicar el dominio definitivo, ponerlo aquí (sin barra final).
-  // Mientras esté vacío, las metaetiquetas usan rutas relativas.
-  siteUrl: "",
+  siteUrl: "https://ericsalinas-data.lovable.app",
 } as const;
 
 export const mailto = `mailto:${profile.email}`;
