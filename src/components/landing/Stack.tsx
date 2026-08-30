@@ -1,4 +1,4 @@
-import { Database, LineChart, BarChart3, Workflow } from "lucide-react";
+import { Database, LineChart, BarChart3, Workflow, Bot } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
@@ -26,6 +26,12 @@ const groups = [
     title: "Automatización",
     text: "Aplicaciones de captura de datos y flujos que reemplazan registro manual y avisos por mensaje.",
     tech: ["Power Apps", "Power Automate", "SharePoint", "openpyxl"],
+  },
+  {
+    icon: Bot,
+    title: "IA aplicada",
+    text: "Agentes con herramientas y memoria de conversación, y pipelines RAG: segmentación de documentos, embeddings e inserción en base vectorial.",
+    tech: ["n8n", "Make", "Google Gemini", "RAG", "Vector stores"],
   },
 ];
 

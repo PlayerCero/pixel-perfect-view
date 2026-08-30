@@ -5,6 +5,7 @@ const links = [
   { id: "perfil", label: "Perfil" },
   { id: "stack", label: "Stack" },
   { id: "proyectos", label: "Proyectos" },
+  { id: "automatizacion", label: "Automatización" },
   { id: "experiencia", label: "Experiencia" },
   { id: "certificados", label: "Certificados" },
   { id: "formacion", label: "Formación" },

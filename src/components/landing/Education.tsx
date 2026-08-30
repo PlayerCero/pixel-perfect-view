@@ -10,7 +10,7 @@ const academic = [
   },
   {
     title: "CTIC – UNI",
-    text: "Especialización en Ciencia de Datos y Automatización: Machine Learning con Python y SQL Server, y automatización de procesos de negocio.",
+    text: "Programa de Innovación Tecnológica (PIT). Cursos completados: Aplicaciones de Inteligencia Artificial, Automatización de Negocios con Gemini, Machine Learning con Python, y Finanzas para la toma de decisiones tecnológicas. En programa: Inferencia estadística y Series de tiempo con Python, Big Data y Cloud Computing.",
     period: "2024 – presente",
   },
 ];

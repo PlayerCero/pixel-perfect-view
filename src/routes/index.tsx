@@ -3,6 +3,7 @@ import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
 import { Stack } from "@/components/landing/Stack";
 import { Projects } from "@/components/landing/Projects";
+import { Automations } from "@/components/landing/Automations";
 import { Experience } from "@/components/landing/Experience";
 import { Certifications } from "@/components/landing/Certifications";
 import { Education } from "@/components/landing/Education";
@@ -39,6 +40,10 @@ const personSchema = {
     "Power BI",
     "Business Intelligence",
     "Automatización de procesos",
+    "IA aplicada",
+    "RAG",
+    "n8n",
+    "Make",
     "Investigación de operaciones",
   ],
   sameAs: [profile.linkedin, profile.github],
@@ -85,6 +90,7 @@ function Index() {
         <Hero />
         <Stack />
         <Projects />
+        <Automations />
         <Experience />
         <Certifications />
         <Education />
